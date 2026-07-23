@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Creative Agency</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display for serif, Inter for sans-serif UI elements -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            surface: '#131313',
+            'surface-dim': '#131313',
+            'surface-bright': '#393939',
+            'surface-container': '#212121',
+            'surface-variant': '#484a4c',
+            'on-surface': '#e2e2e2',
+            'on-surface-variant': '#c3c7c9',
+            primary: '#a2c9ff',
+            'on-primary': '#00315b',
+          },
+          backgroundImage: {
+            'hero-glow': 'radial-gradient(circle at 75% 50%, rgba(255, 140, 100, 0.15) 0%, rgba(0, 0, 0, 0) 50%)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Specific Visual Effects -->
+<style data-purpose="custom-effects">
+    body {
+      background-color: theme('colors.surface');
+      color: theme('colors.on-surface');
+      margin: 0;
+      /* Using a placeholder for the complex background image provided in the prompt */
+      background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvFMaxXVn_Oe--oobVK9BWGOcml7HHU9tH5-IDlK9lWEAJwQLTyCURviQUYONZxyUcXDTk6Q8mLsXZ3b1ZRgGLModrlRkvu011FBL27iQgNHA_1fwU2CbbS0XPDKC6OGHCzxmMB0PXaHLxoftdbCpfRS6k5k-N3_TGL6RJ3Kqo98ucWEcpfei5Djb-eD2DXiBa7mzxNSY0tOcbaONNeKZsa1Urtu4t8y-YeuluOE-Vs21slSnDIVUl5EA');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    /* Glassmorphism utility for buttons/nav */
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .glass-button:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden font-sans">
+<!-- BEGIN: MainHeader -->
+<header class="absolute top-0 w-full z-50 py-6 px-8 md:px-16 flex items-center justify-between" data-purpose="site-header">
+<!-- Logo area (blurred circle placeholder as seen in image) -->
+<div class="flex items-center gap-2" data-purpose="logo">
+<div class="w-12 h-12 rounded-full glass-effect flex items-center justify-center">
+<!-- Abstract logo shape -->
+<div class="w-6 h-6 rounded-full bg-white/50 blur-sm"></div>
+</div>
+</div>
+<!-- Main Navigation -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white/80" data-purpose="main-nav">
+<a class="hover:text-white transition-colors duration-200" href="#">Features</a>
+<a class="hover:text-white transition-colors duration-200" href="#">Workflows</a>
+<a class="hover:text-white transition-colors duration-200" href="#">Testimonials</a>
+<a class="hover:text-white transition-colors duration-200" href="#">Our Vision</a>
+<a class="hover:text-white transition-colors duration-200" href="#">Contact</a>
+</nav>
+<!-- Call to Action -->
+<div data-purpose="header-cta">
+<a class="glass-effect glass-button rounded-full px-6 py-2.5 text-sm font-medium text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)]" href="#">
+        Join the waitlist
+      </a>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: Hero Section -->
+<main>
+<section class="relative w-full min-h-screen flex items-center px-8 md:px-16 lg:px-24 pt-20" data-purpose="hero-section">
+<!-- Overlay gradient to ensure text readability -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#192440]/80 via-transparent to-transparent pointer-events-none z-0"></div>
+<!-- Content Container -->
+<div class="relative z-10 max-w-3xl lg:max-w-2xl mt-12 md:mt-0">
+<!-- Main Headline -->
+<h1 class="text-5xl md:text-7xl lg:text-[80px] leading-[1.1] font-sans tracking-tight text-[#e2e2eb] mb-6 font-medium" data-purpose="hero-title">
+          Be in touch with<br/>
+<span class="font-serif italic text-white font-normal block mt-2">your imagination</span>
+</h1>
+<!-- Descriptive Paragraph -->
+<p class="text-base md:text-lg text-[#b4b8cd] max-w-lg mb-10 leading-relaxed font-light" data-purpose="hero-description">
+          Our work begins where imagination sparks: we shape ideas that don't exist yet and bring them to life through the power of AI.
+        </p>
+<!-- Primary Action Button -->
+<a class="inline-flex items-center justify-center glass-effect glass-button rounded-full px-8 py-3.5 text-sm font-medium text-white transition-all duration-300 w-max shadow-[0_0_20px_rgba(255,255,255,0.05)]" data-purpose="hero-cta" href="#">
+          Read more
+        </a>
+</div>
+<!-- Note: The giant goldfish and human figure are part of the background image https://lh3.googleusercontent.com/aida/AP1WRLvFMaxXVn_Oe--oobVK9BWGOcml7HHU9tH5-IDlK9lWEAJwQLTyCURviQUYONZxyUcXDTk6Q8mLsXZ3b1ZRgGLModrlRkvu011FBL27iQgNHA_1fwU2CbbS0XPDKC6OGHCzxmMB0PXaHLxoftdbCpfRS6k5k-N3_TGL6RJ3Kqo98ucWEcpfei5Djb-eD2DXiBa7mzxNSY0tOcbaONNeKZsa1Urtu4t8y-YeuluOE-Vs21slSnDIVUl5EA as requested. 
+           If this were built with separate assets, they would be absolutely positioned layered images or 3D canvas elements here. -->
+</section>
+</main>
+<!-- END: Hero Section -->
+</body></html>
